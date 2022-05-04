@@ -5,12 +5,11 @@ export const Navbar = () => {
 	return (
 		<nav className="navbar navbar-light bg-light mb-3">
 			<Link to="/">
-				<span className="navbar-brand mb-0 h1">React Boilerplate</span>
+				<img className="navbar-logo" src="https://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG18.png"></img>
 			</Link>
-			<div className="ml-auto">
-				<Link to="/demo">
-					<button className="btn btn-primary">Check the Context in action</button>
-				</Link>
+			<div className="ml-auto favorites-nav">
+				Favorites
+				// //
 			</div>
 		</nav>
 	);

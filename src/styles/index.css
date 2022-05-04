@@ -1,3 +1,21 @@
-/* 
-    General Styles
-*/
+body {
+    background-color: rgb(218, 216, 216);
+}
+
+.navbar-logo {
+    height: 40px;
+}
+.favorites-nav {
+    padding: 10px;
+    font-style: none;
+}
+.card {
+    width: 18rem;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+}
+.learnmore-button {
+    display: inline-block;
+    align-self: flex-end;
+}
