@@ -13,7 +13,7 @@ export const Planets = ({ data }) => {
               <div className="card col" key={index}>
                 <img
                   className="card-img-top"
-                  src="https://static.wikia.nocookie.net/starwars/images/c/cc/Star-wars-logo-new-tall.jpg/revision/latest?cb=20190313021755"
+                  src="..."
                 ></img>
                 <div className="card-body">
                   <h5 className="card-title">{planets.name}</h5>
@@ -28,7 +28,7 @@ export const Planets = ({ data }) => {
                   </p>
                   <div className="learnmore-button">
                   <Link to="/planets/planets:id">
-                    <a href="#" className="btn btn-outline-primary">Learn More!</a>
+                    <div className="btn btn-outline-primary">Learn More!</div>
                   </Link>
                   </div>
                 </div>

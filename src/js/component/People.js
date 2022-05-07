@@ -13,7 +13,7 @@ export const People = ({ data }) => {
               <div className="card col" key={index}>
                 <img
                   className="card-img-top"
-                  src="https://static.wikia.nocookie.net/starwars/images/c/cc/Star-wars-logo-new-tall.jpg/revision/latest?cb=20190313021755"
+                  src="..."
                 ></img>
                 <div className="card-body">
                   <h5 className="card-title">{people.name}</h5>
@@ -30,8 +30,8 @@ export const People = ({ data }) => {
                     <strong>Birth Year:</strong> {people.birth_year}
                   </p>
                   <div className="learnmore-button">
-                  <Link to="/people/people:id">
-                    <a href="#" className="btn btn-outline-primary">Learn More!</a>
+                  <Link to="/:type/:id">
+                    <div className="btn btn-outline-primary">Learn More!</div>
                   </Link>
                   </div>
                 </div>
