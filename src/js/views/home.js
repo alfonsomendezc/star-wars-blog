@@ -1,35 +1,56 @@
-import React from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { People } from "../component/People";
 import { Planets } from "../component/Planets";
+import { Context } from "../store/appContext";
 import "../../styles/home.css";
-import { useEffect, useState } from "react";
 
 export const Home = () => {
-	const [people, setPeople] = useState([]);
-	const [planets, setPlanets] = useState([]); 
-
-	useEffect(() => {
-		async function fetchPeople() {
-			let response = await fetch('https://swapi.dev/api/people');
-			let data = await response.json();
-			setPeople (data.results);
-		}
-		async function fetchPlanets() {
-			let response = await fetch('https://swapi.dev/api/planets');
-			let data = await response.json();
-			setPlanets (data.results);
-		}
-
-		fetchPeople();
-		fetchPlanets();
-	}, []);
+	const { store, actions } = useContext(Context);
 	return (
 	<>
-		<div className="text-center mt-5">
-			<h1>Star Wars Database!</h1>
+		<div className="container mb-5 pb-5 overflow-hidden">
+			<div className="col-12">
+				<h1 className="text">People</h1>
+			</div>
+			<div className="row overX">
+				{store.people.map((item, index) => {
+					return (
+						<div key={index} className="col-12 col-md-6 col-lg-4">
+							<People
+								key={index}
+								id={index}
+								name={item.name}
+								gender={item.gender}
+								height={item.height}
+								mass={item.mass}
+								birth_year={item.birth_year}
+							/>
+						</div>
+					);
+				})}
+			</div>
+			<div className="col-12 mt-5">
+				<h1 className="text">Planets</h1>
+			</div>
+			<div className="row overX">
+				{store.planets.map((item, index) => {
+					return (
+						<div key={index} className="col-12 col-md-6 col-lg-4 ">
+							<Planets
+								key={index}
+								id={index}
+								url={item.url}
+								name={item.name}
+								diameter={item.diameter}
+								climate={item.climate}
+								population={item.population}
+								terrain={item.terrain}
+							/>
+						</div>
+					);
+				})}
+			</div>
 		</div>
-		<People data={people}/>
-		<Planets data={planets}/>
 	</>
 	);
 };
