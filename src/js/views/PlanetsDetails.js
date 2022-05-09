@@ -18,7 +18,7 @@ export const PlanetsDetails = () => {
 					/>
 				</div>
 				<div className="col-12 col-md-6 text-center">
-					<h1>{store.planets[params.theid].name}</h1>
+					<h1>{store.planets[params.id].name}</h1>
 					<p>
 						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
 						Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
@@ -32,15 +32,15 @@ export const PlanetsDetails = () => {
 					</p>
 				</div>
 			</div>
-			<div className="row text-center text-info mb-3">
+			<div className="row text-center mb-3">
 				<div className="col-12 col-md-4 border rounded shadow py-3">
-					Diameter: {store.planets[params.theid].diameter}
+					Diameter: {store.planets[params.id].diameter}
 				</div>
 				<div className="col-12 col-md-4 border rounded shadow py-3">
-					Population: {store.planets[params.theid].population}
+					Population: {store.planets[params.id].population}
 				</div>
 				<div className="col-12 col-md-4 border rounded shadow py-3">
-					Terrain: {store.planets[params.theid].terrain}
+					Terrain: {store.planets[params.id].terrain}
 				</div>
 			</div>
 

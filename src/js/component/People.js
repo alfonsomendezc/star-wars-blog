@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 
-export const People = props => {
+export const People = (props) => {
   const { store, actions } = useContext(Context);
 
   return (
@@ -34,9 +34,15 @@ export const People = props => {
                   <Link to={`/PeopleDetails/${props.id}`}>
                     <div className="btn btn-primary">Learn More</div>
                   </Link>
+                  <div className="col-6">
+                    <Link onClick={() => actions.addFavorite(props.name)}>
+                      <div className="btn btn-outline-warning">
+                        <i className="fas fa-heart" />
+                      </div>
+                    </Link>
+                  </div>
                 </div>
-                <div className="col-6">
-                </div>
+                <div className="col-6"></div>
               </div>
             </div>
           </div>

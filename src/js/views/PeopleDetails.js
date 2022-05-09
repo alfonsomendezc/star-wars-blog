@@ -17,7 +17,7 @@ export const PeopleDetails = props => {
 					/>
 				</div>
 				<div className="col-12 col-md-6 text-center">
-					<h1>{store.people.name}</h1>
+					<h1>{store.people[params.id].name}</h1>
 					<p>
 						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
 						Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
@@ -31,15 +31,15 @@ export const PeopleDetails = props => {
 					</p>
 				</div>
 			</div>
-			<div className="row text-center text-info mb-3">
+			<div className="row text-center mb-3">
 				<div className="col-12 col-md-4 border rounded shadow py-3">
-					Gender: {store.people.gender}
+					Gender: {store.people[params.id].gender}
 				</div>
 				<div className="col-12 col-md-4 border rounded shadow py-3">
-					Hair Color: {store.people.hair_color}
+					Hair Color: {store.people[params.id].hair_color}
 				</div>
 				<div className="col-12 col-md-4 border rounded shadow py-3">
-					Eye Color: {store.people.eye_color}
+					Eye Color: {store.people[params.id].eye_color}
 				</div>
 			</div>
 			<div className="row">
