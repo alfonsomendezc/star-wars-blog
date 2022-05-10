@@ -10,7 +10,7 @@ export const Home = () => {
 	<>
 		<div className="container mb-5 pb-5 overflow-hidden">
 			<div className="col-12">
-				<h1 className="text">People</h1>
+				<h1 className="category-title">People</h1>
 			</div>
 			<div className="row overX">
 				{store.people.map((item, index) => {
@@ -30,7 +30,7 @@ export const Home = () => {
 				})}
 			</div>
 			<div className="col-12 mt-5">
-				<h1 className="text">Planets</h1>
+				<h1 className="category-title">Planets</h1>
 			</div>
 			<div className="row overX">
 				{store.planets.map((item, index) => {

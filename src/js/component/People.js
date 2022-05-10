@@ -12,7 +12,7 @@ export const People = (props) => {
       <div className="people mt-5">
         <div className="row">
           <div className="card col">
-            <img className="card-img-top" src="..."></img>
+            <img className="card-img-top" src="https://talbottinn.com/wp-content/uploads/2013/11/dummy-image-square.jpg"></img>
             <div className="card-body">
               <h5 className="card-title">
                 <strong>Character Name:</strong> {props.name}
@@ -32,17 +32,16 @@ export const People = (props) => {
               <div className="row">
                 <div className="col-6">
                   <Link to={`/PeopleDetails/${props.id}`}>
-                    <div className="btn btn-primary">Learn More</div>
+                    <div className="btn btn-dark">Learn More</div>
                   </Link>
-                  <div className="col-6">
-                    <Link onClick={() => actions.addFavorite(props.name)}>
-                      <div className="btn btn-outline-warning">
+                  <div className="favorite-icon">
+                    <div onClick={() => actions.addFavorite(props.name)}>
+                      <div className="btn btn-outline-info">
                         <i className="fas fa-heart" />
                       </div>
-                    </Link>
+                    </div>
                   </div>
                 </div>
-                <div className="col-6"></div>
               </div>
             </div>
           </div>

@@ -9,12 +9,12 @@ export const PlanetsDetails = () => {
     const params = useParams();
 
     return (
-		<div className="container">
+		<div className="container-details">
 			<div className="row">
 				<div className="col-12 col-md-6">
 					<img
 						className="img-fluid"
-						src="https://www.lacasadeel.net/wp-content/uploads/2020/10/darth-vader-6-cover-TALL.jpg"
+						src="https://talbottinn.com/wp-content/uploads/2013/11/dummy-image-square.jpg"
 					/>
 				</div>
 				<div className="col-12 col-md-6 text-center">
@@ -33,20 +33,35 @@ export const PlanetsDetails = () => {
 				</div>
 			</div>
 			<div className="row text-center mb-3">
-				<div className="col-12 col-md-4 border rounded shadow py-3">
+				<div className="col-12 col-md-3 border rounded shadow py-3">
 					Diameter: {store.planets[params.id].diameter}
 				</div>
-				<div className="col-12 col-md-4 border rounded shadow py-3">
+				<div className="col-12 col-md-3 border rounded shadow py-3">
 					Population: {store.planets[params.id].population}
 				</div>
-				<div className="col-12 col-md-4 border rounded shadow py-3">
+				<div className="col-12 col-md-3 border rounded shadow py-3">
 					Terrain: {store.planets[params.id].terrain}
+				</div>
+				<div className="col-12 col-md-3 border rounded shadow py-3">
+					Rotation Period: {store.planets[params.id].rotation_period}
+				</div>
+				<div className="col-12 col-md-3 border rounded shadow py-3">
+					Orbital period: {store.planets[params.id].orbital_period}
+				</div>
+				<div className="col-12 col-md-3 border rounded shadow py-3">
+					Climate: {store.planets[params.id].climate}
+				</div>
+				<div className="col-12 col-md-3 border rounded shadow py-3">
+					Gravity: {store.planets[params.id].gravity}
+				</div>
+				<div className="col-12 col-md-3 border rounded shadow py-3">
+					Surface Water: {store.planets[params.id].surface_water}
 				</div>
 			</div>
 
 			<div className="row">
 				<Link to="/">
-					<span className="btn btn-primary btn-lg" href="#" role="button">
+					<span className="btn btn-dark btn-lg" href="#" role="button">
 						Back home
 					</span>
 				</Link>
